@@ -1,0 +1,25 @@
+math_scores <- c(85, 90, 78, 92, 88)
+science_scores <- c(80, 95, 76, 89, 85)
+english_scores <- c(82, 88, 79, 94, 86)
+
+student_scores <- cbind(Math = math_scores, Science = science_scores, English = english_scores)
+
+print("Student Scores:")
+print(student_scores)
+
+average_scores <- rowMeans(student_scores)
+
+print("Average Scores for Each Student:")
+print(average_scores)
+
+output :-
+Student Scores:
+     Math Science English
+[1,]   85      80      82
+[2,]   90      95      88
+[3,]   78      76      79
+[4,]   92      89      94
+[5,]   88      85      86
+Average Scores for Each Student:
+[1] 82.33333 91.00000 77.66667 91.66667 86.33333
+
