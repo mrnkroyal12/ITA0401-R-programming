@@ -1,0 +1,7 @@
+set.seed(123)
+train_index <- sample(1:nrow(iris), 0.8 * nrow(iris))
+train <- iris[train_index, ]
+test <- iris[-train_index, ]
+
+model <- glm(Species ~ Petal.Length + Petal.Width, data = train, family = binomial)
+predictions <- predict(model, test, type = "response")
