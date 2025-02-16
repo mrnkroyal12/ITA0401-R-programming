@@ -1,0 +1,13 @@
+df <- read.csv("input.csv", header = TRUE)
+
+# a. Max salary
+max_salary <- max(df$Salary, na.rm=TRUE)
+
+# b. Details of max salary person
+person_max_salary <- df[df$Salary == max_salary,]
+
+# c. People in IT department
+IT_employees <- subset(df, Department == "IT")
+
+# d. IT employees with salary > 600
+IT_high_salary <- subset(df, Department == "IT" & Salary > 600)
