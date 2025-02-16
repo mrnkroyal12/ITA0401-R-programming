@@ -1,0 +1,7 @@
+data(iris)
+dim(iris)
+str(iris)
+summary(iris)
+sapply(iris[,1:4], sd)
+tapply(iris$Sepal.Length, iris$Species, mean)
+quantile(iris$Sepal.Width)
