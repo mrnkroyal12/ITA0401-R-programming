@@ -1,0 +1,5 @@
+student_info <- data.frame(StudentID = c(1,2,3), Name = c("John", "Jane", "Doe"))
+student_scores <- data.frame(StudentID = c(1,2,3), MathScore = c(80,90,85), ScienceScore = c(75,95,80), EnglishScore = c(78,88,82))
+
+merged_data <- merge(student_info, student_scores, by="StudentID")
+print(merged_data)
