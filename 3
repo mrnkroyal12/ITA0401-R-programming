@@ -1,0 +1,4 @@
+library(reshape2)
+sale <- data.frame(Region = c("East", "West"), Q1 = c(100, 150), Q2 = c(200, 250), Q3 = c(300, 350), Q4 = c(400, 450))
+long_format <- melt(sale, id.vars = "Region", variable.name = "Quarter", value.name = "Sales")
+print(long_format)
