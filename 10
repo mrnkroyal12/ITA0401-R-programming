@@ -1,0 +1,9 @@
+library(ggplot2)
+data(Titanic)
+titanic_df <- as.data.frame(Titanic)
+
+ggplot(titanic_df, aes(x = Class, y = Freq, fill = Survived)) + 
+  geom_bar(stat = "identity") + theme_minimal()
+
+ggplot(titanic_df, aes(x = Age)) + 
+  geom_histogram(binwidth = 5, fill = "blue", color = "black")
